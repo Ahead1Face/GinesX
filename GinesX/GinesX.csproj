@@ -63,10 +63,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Command.cs" />
+    <Compile Include="CustomControls\WindowBorder.xaml.cs">
+      <DependentUpon>WindowBorder.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\RegMindowModel.cs" />
     <Compile Include="View\RegWindow.xaml.cs">
       <DependentUpon>RegWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="CustomControls\WindowBorder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Dictionary1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

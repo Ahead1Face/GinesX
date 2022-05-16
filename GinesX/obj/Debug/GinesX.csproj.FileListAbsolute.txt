@@ -24,3 +24,31 @@ C:\Users\ssato\Documents\Сигма М\GinesX\GinesX\obj\Debug\View\MainWindow.g
 C:\Users\ssato\Documents\Сигма М\GinesX\GinesX\obj\Debug\View\MainWindow.baml
 C:\Users\ssato\Documents\Сигма М\GinesX\GinesX\obj\Debug\View\RegWindow.g.cs
 C:\Users\ssato\Documents\Сигма М\GinesX\GinesX\obj\Debug\View\RegWindow.baml
+C:\Users\ssato\Documents\Sigma\GinesX\GinesX\bin\Debug\GinesX.exe.config
+C:\Users\ssato\Documents\Sigma\GinesX\GinesX\bin\Debug\GinesX.exe
+C:\Users\ssato\Documents\Sigma\GinesX\GinesX\bin\Debug\GinesX.pdb
+C:\Users\ssato\Documents\Sigma\GinesX\GinesX\bin\Debug\MaterialDesignColors.dll
+C:\Users\ssato\Documents\Sigma\GinesX\GinesX\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\ssato\Documents\Sigma\GinesX\GinesX\bin\Debug\MaterialDesignColors.pdb
+C:\Users\ssato\Documents\Sigma\GinesX\GinesX\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\ssato\Documents\Sigma\GinesX\GinesX\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\ssato\Documents\Sigma\GinesX\GinesX\obj\Debug\GinesX.csproj.AssemblyReference.cache
+C:\Users\ssato\Documents\Sigma\GinesX\GinesX\obj\Debug\GinesX.csproj.SuggestedBindingRedirects.cache
+C:\Users\ssato\Documents\Sigma\GinesX\GinesX\obj\Debug\Dictionary1.baml
+C:\Users\ssato\Documents\Sigma\GinesX\GinesX\obj\Debug\View\MainWindow.g.cs
+C:\Users\ssato\Documents\Sigma\GinesX\GinesX\obj\Debug\View\RegWindow.g.cs
+C:\Users\ssato\Documents\Sigma\GinesX\GinesX\obj\Debug\App.g.cs
+C:\Users\ssato\Documents\Sigma\GinesX\GinesX\obj\Debug\GinesX_MarkupCompile.cache
+C:\Users\ssato\Documents\Sigma\GinesX\GinesX\obj\Debug\GinesX_MarkupCompile.lref
+C:\Users\ssato\Documents\Sigma\GinesX\GinesX\obj\Debug\App.baml
+C:\Users\ssato\Documents\Sigma\GinesX\GinesX\obj\Debug\View\MainWindow.baml
+C:\Users\ssato\Documents\Sigma\GinesX\GinesX\obj\Debug\View\RegWindow.baml
+C:\Users\ssato\Documents\Sigma\GinesX\GinesX\obj\Debug\GinesX.g.resources
+C:\Users\ssato\Documents\Sigma\GinesX\GinesX\obj\Debug\GinesX.Properties.Resources.resources
+C:\Users\ssato\Documents\Sigma\GinesX\GinesX\obj\Debug\GinesX.csproj.GenerateResource.cache
+C:\Users\ssato\Documents\Sigma\GinesX\GinesX\obj\Debug\GinesX.csproj.CoreCompileInputs.cache
+C:\Users\ssato\Documents\Sigma\GinesX\GinesX\obj\Debug\GinesX.csproj.CopyComplete
+C:\Users\ssato\Documents\Sigma\GinesX\GinesX\obj\Debug\GinesX.exe
+C:\Users\ssato\Documents\Sigma\GinesX\GinesX\obj\Debug\GinesX.pdb
+C:\Users\ssato\Documents\Sigma\GinesX\GinesX\obj\Debug\CustomControls\WindowBorder.g.cs
+C:\Users\ssato\Documents\Sigma\GinesX\GinesX\obj\Debug\CustomControls\WindowBorder.baml
