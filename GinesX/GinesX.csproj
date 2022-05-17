@@ -71,6 +71,7 @@
     <Compile Include="View\RegWindow.xaml.cs">
       <DependentUpon>RegWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WindowBilder.cs" />
     <Page Include="CustomControls\WindowBorder.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
