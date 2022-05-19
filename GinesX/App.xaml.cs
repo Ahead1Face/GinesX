@@ -15,8 +15,7 @@ namespace GinesX
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            MainWindow mn = new MainWindow();
-            mn.Show();
+            WindowBilder.ShowMainWindow();
             base.OnStartup(e);
         }
     }

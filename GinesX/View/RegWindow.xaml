@@ -6,8 +6,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GinesX.View"
         mc:Ignorable="d"
-        Title="RegWindow" Height="450" Width="800" WindowStyle="None">
+        Title="RegWindow" Height="450" Width="800" WindowStyle="None" ResizeMode="NoResize">
     <Grid x:Name="MainGrid">
+        <Grid.Background>
+            <ImageBrush ImageSource="{StaticResource RegFont}"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
             <RowDefinition Height="200*"/>
@@ -59,7 +62,8 @@
                     <Button x:Name="B_Back"
                             Content="Назад"
                             Background="Gray"
-                            Cursor="Hand"/>
+                            Cursor="Hand"
+                            Command="{Binding ChangeToMainWindow}"/>
                     <Button Grid.Column="2" 
                             Content="Регистрация"
                             x:Name="B_RegOn"
