@@ -6,7 +6,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GinesX"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True">
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize"
+        WindowStyle="None" AllowsTransparency="True">
     <Grid x:Name="MainGrid" >
         <Grid.Background>
             <ImageBrush ImageSource="{StaticResource MainFont}"/>
@@ -37,14 +38,15 @@
                          Cursor="No"
                          materialDesign:HintAssist.Hint="Логин"
                          VerticalContentAlignment="Center"
-                         HorizontalContentAlignment="Center"/>
+                         HorizontalContentAlignment="Center"
+                         TextChanged="TB_Login_TextChanged"/>
                 <PasswordBox x:Name="TB_Password"
                              Grid.Row="3"
                              FontSize="22"
                              Cursor="No"
                              materialDesign:HintAssist.Hint="Пароль"
                              VerticalContentAlignment="Center"
-                             HorizontalContentAlignment="Center"/>
+                             HorizontalContentAlignment="Center" PasswordChanged="TB_Password_PasswordChanged"/>
                 
                 <Grid Grid.Row="5">
                     <Grid.RowDefinitions>

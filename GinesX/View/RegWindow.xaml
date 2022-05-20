@@ -39,6 +39,7 @@
                          VerticalContentAlignment="Center"
                          HorizontalContentAlignment="Center"
                          FontSize="22"
+                         TextChanged="TB_Email_TextChanged"
                          />
                 <TextBox Grid.Row="3"
                          x:Name="TB_Login"
@@ -46,13 +47,15 @@
                          VerticalContentAlignment="Center"
                          HorizontalContentAlignment="Center"
                          FontSize="22"
+                         TextChanged="TB_Login_TextChanged"
                          />
                 <PasswordBox Grid.Row="5" 
                              x:Name="PB_Password"
                              materialDesign:HintAssist.Hint="Пароль"
                              VerticalContentAlignment="Center"
                              HorizontalContentAlignment="Center"
-                             FontSize="22"/>
+                             FontSize="22"
+                             PasswordChanged="PB_Password_PasswordChanged"/>
                 <Grid Grid.Row="7">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="100*"/>
