@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace GinesX.Model
 {
-    class User
+    public class User
     {
         public int Id { get; set; }
         public string Login { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
         public byte[] avatar { get; set; }
-        List<Game> Games;
+        public virtual List<Game> Games { get; set; }
         public User()
         {
             Id = 0;
@@ -22,7 +22,7 @@ namespace GinesX.Model
             Password = "";
             this.avatar = new byte[0];
         }
-        public User(int id, string login, string email, string password, byte[] avatar)
+        public User(int id, string login, string email, string password)
         {
             Id = id;
             Login = login;

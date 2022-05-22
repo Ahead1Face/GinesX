@@ -39,7 +39,8 @@
                          VerticalContentAlignment="Center"
                          HorizontalContentAlignment="Center"
                          FontSize="22"
-                         TextChanged="TB_Email_TextChanged"
+                         Text="{Binding Email}"
+                         Foreground="{Binding EmailColor}"
                          />
                 <TextBox Grid.Row="3"
                          x:Name="TB_Login"
@@ -47,7 +48,7 @@
                          VerticalContentAlignment="Center"
                          HorizontalContentAlignment="Center"
                          FontSize="22"
-                         TextChanged="TB_Login_TextChanged"
+                         Text="{Binding Login}"
                          />
                 <PasswordBox Grid.Row="5" 
                              x:Name="PB_Password"
@@ -55,7 +56,8 @@
                              VerticalContentAlignment="Center"
                              HorizontalContentAlignment="Center"
                              FontSize="22"
-                             PasswordChanged="PB_Password_PasswordChanged"/>
+                             
+                             />
                 <Grid Grid.Row="7">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="100*"/>
@@ -72,7 +74,9 @@
                             x:Name="B_RegOn"
                             FontSize="12"
                             Background="Gray"
-                            Cursor="Hand"/>
+                            Cursor="Hand" Margin="0,2,0,0" VerticalAlignment="Top"
+                            Command="{Binding Reg}"
+                            CommandParameter="{Binding ElementName=PB_Password}"/>
                 </Grid>
             </Grid>
         </Grid>

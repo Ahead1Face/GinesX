@@ -3,12 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel;
 
 namespace GinesX.ViewModel
 {
-    internal class MainWindowModel
+    internal class MainWindowModel : INotifyPropertyChanged
     {
         public event EventHandler EventCloseWindow;
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        string login;
+        public string Login
+        {
+            get { return login; }
+            set { login = value; }
+        }
 
         private Command changeToRegWindow;
         public void CLoseWindow()=> EventCloseWindow?.Invoke(this, EventArgs.Empty);

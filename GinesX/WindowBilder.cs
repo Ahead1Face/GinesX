@@ -22,5 +22,13 @@ namespace GinesX
             viewmodel.RegMindowClose +=(sender, args) => { regwindow.Close(); };
             regwindow.Show();
         }
+        
+        public static void ShowWindowGl()
+        {
+            var windowGl = new WindowGl();
+            var windowGlModel = new WindowGlModel();
+            windowGl.DataContext = windowGlModel;
+            windowGlModel.EventCloseWindow += (sender, args) => { windowGl.Close(); };
+        }
     }
 }

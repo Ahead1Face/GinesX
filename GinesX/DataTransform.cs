@@ -26,4 +26,5 @@ namespace GinesX
                 return image;
             }
         }
+    }
 }

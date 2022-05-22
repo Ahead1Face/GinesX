@@ -39,7 +39,8 @@
                          materialDesign:HintAssist.Hint="Логин"
                          VerticalContentAlignment="Center"
                          HorizontalContentAlignment="Center"
-                         TextChanged="TB_Login_TextChanged"/>
+                         TextChanged="TB_Login_TextChanged"
+                         Text="{Binding Login}"/>
                 <PasswordBox x:Name="TB_Password"
                              Grid.Row="3"
                              FontSize="22"

@@ -83,3 +83,5 @@ C:\Satonin\GinesX\GinesX\bin\Debug\EntityFramework.dll
 C:\Satonin\GinesX\GinesX\bin\Debug\EntityFramework.SqlServer.dll
 C:\Satonin\GinesX\GinesX\bin\Debug\EntityFramework.xml
 C:\Satonin\GinesX\GinesX\bin\Debug\EntityFramework.SqlServer.xml
+C:\Satonin\GinesX\GinesX\obj\Debug\View\WindowGl.g.cs
+C:\Satonin\GinesX\GinesX\obj\Debug\View\WindowGl.baml

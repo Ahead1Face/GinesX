@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace GinesX.Model
 {
-    class Game
+    public class Game
     {
         public int Id { get; set; }
         public string Title { get; set; }
         public string Price { get; set; }
 
-        List<User> Users;
+        public virtual List<User> Users { get; set; }
     }
 }
