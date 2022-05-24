@@ -39,7 +39,7 @@
                          VerticalContentAlignment="Center"
                          HorizontalContentAlignment="Center"
                          FontSize="22"
-                         Text="{Binding Email}"
+                         Text="{Binding NewEmail}"
                          Foreground="{Binding EmailColor}"
                          />
                 <TextBox Grid.Row="3"
@@ -48,7 +48,8 @@
                          VerticalContentAlignment="Center"
                          HorizontalContentAlignment="Center"
                          FontSize="22"
-                         Text="{Binding Login}"
+                         Text="{Binding Newlogin}"
+                         Foreground="{Binding LoginColor}"
                          />
                 <PasswordBox Grid.Row="5" 
                              x:Name="PB_Password"
@@ -56,7 +57,7 @@
                              VerticalContentAlignment="Center"
                              HorizontalContentAlignment="Center"
                              FontSize="22"
-                             
+                             Foreground="{Binding PasswordColor}"
                              />
                 <Grid Grid.Row="7">
                     <Grid.ColumnDefinitions>

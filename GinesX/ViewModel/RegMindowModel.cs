@@ -6,8 +6,10 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using GinesX.Model;
 
 namespace GinesX.ViewModel
 {
@@ -22,8 +24,11 @@ namespace GinesX.ViewModel
 
         string email;
         string login;
-        System.Windows.Media.Brush emailColor;
-        public System.Windows.Media.Brush EmailColor
+
+        Brush emailColor;
+        Brush loginColor;
+        Brush passwordColor;
+        public Brush EmailColor
         {
             get { return emailColor; }
             set
@@ -33,8 +38,27 @@ namespace GinesX.ViewModel
             }
         }
 
+        public Brush LoginColor
+        {
+            get { return loginColor; }
+            set
+            {
+                loginColor = value;
+                OnPropertyChanged("LoginColor");
+            }
+        }
 
-        public string Email
+        public Brush PasswordColor
+        {
+            get { return passwordColor; }
+            set
+            {
+                passwordColor = value;
+                OnPropertyChanged("PasswordColor");
+            }
+        }
+
+        public string NewEmail
         {
             get { return email; }
             set
@@ -43,7 +67,7 @@ namespace GinesX.ViewModel
                 OnPropertyChanged();
             }
         }
-        public string Login
+        public string Newlogin
         {
             get { return login; }
             set
@@ -60,7 +84,9 @@ namespace GinesX.ViewModel
 
         public RegMindowModel()
         {
-            EmailColor = System.Windows.Media.Brushes.Black;
+            EmailColor = Brushes.Black;
+            LoginColor = Brushes.Black;
+            PasswordColor = Brushes.Black;
         }
 
         public Command Reg
@@ -76,15 +102,53 @@ namespace GinesX.ViewModel
                      Regex rg_login = new Regex(@"^[A-Za-z1-9]{1,15}$");
                      Regex rg_pb = new Regex(@"^[A-Z]{1,5}[A-Za-z1-9]{1,20}[!@#%^&*]{1,5}$");
 
-                     if (rg_email.IsMatch(Email))
+                     try
                      {
-                         EmailColor = System.Windows.Media.Brushes.DarkSeaGreen;
+                         if (rg_email.IsMatch(NewEmail))
+                         {
+                             EmailColor = Brushes.DarkSeaGreen;
+                         }
+                         else
+                         {
+                             EmailColor = Brushes.Red;
+                         }
+
+                         if (rg_login.IsMatch(Newlogin))
+                         {
+                             LoginColor = Brushes.DarkSeaGreen;
+                         }
+                         else
+                         {
+                             LoginColor = Brushes.Red;
+                         }
+
+                         if (rg_pb.IsMatch(password))
+                         {
+                             PasswordColor = Brushes.DarkSeaGreen;
+                         }
+                         else
+                         {
+                             PasswordColor = Brushes.Red;
+                         }
                      }
-                     else
+                     catch
                      {
-                         EmailColor = System.Windows.Media.Brushes.Red;
+                         MessageBox.Show("Введите данные");
                      }
-                     
+
+                     using (BDConnect db = new BDConnect())
+                     {
+                         User user = db.User.Where(u => u.Login == Newlogin).FirstOrDefault();
+                         if (LoginColor == Brushes.DarkSeaGreen && EmailColor == Brushes.DarkSeaGreen && PasswordColor == Brushes.DarkSeaGreen)
+                         {
+                             int maxID = db.User.Max(u => u.Id);
+                             User newUser = new User(maxID + 1, Newlogin, NewEmail, password);
+                             db.User.Add(newUser);
+                             db.SaveChanges();
+                             WindowBilder.ShowWindowGl(maxID + 1, Newlogin, password);
+                             CloseWindow();
+                         }
+                     }
                  }));
             }
    

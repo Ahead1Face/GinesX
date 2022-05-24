@@ -30,7 +30,6 @@ namespace GinesX
                     
                     if(db.User.Count() == 0 && db.Game.Count() == 0)
                     {
-
                         User ASS = new User(1, "ASS", "ASS@yansde.ru", "PassWord!");
                         db.User.Add(ASS);
                     }
