@@ -47,7 +47,10 @@
                              Cursor="No"
                              materialDesign:HintAssist.Hint="Пароль"
                              VerticalContentAlignment="Center"
-                             HorizontalContentAlignment="Center" PasswordChanged="TB_Password_PasswordChanged"/>
+                             HorizontalContentAlignment="Center"
+                             PasswordChanged="TB_Password_PasswordChanged"
+                              />
+                             
                 
                 <Grid Grid.Row="5">
                     <Grid.RowDefinitions>
@@ -64,7 +67,9 @@
                             Grid.Row="1"
                             Content="Войти"
                             Cursor="Hand" 
-                            Background="Gray"/>
+                            Background="Gray"
+                            Command="{Binding ShowToThirdWindow}"
+                            CommandParameter="{Binding ElementName=TB_Password}"/>
                     <Button x:Name="B_Reg"
                             Grid.Column="3"
                             Grid.Row="1"

@@ -139,7 +139,7 @@ namespace GinesX.ViewModel
                      using (BDConnect db = new BDConnect())
                      {
                          User user = db.User.Where(u => u.Login == Newlogin).FirstOrDefault();
-                         if (LoginColor == Brushes.DarkSeaGreen && EmailColor == Brushes.DarkSeaGreen && PasswordColor == Brushes.DarkSeaGreen)
+                         if (rg_email.IsMatch(NewEmail) && rg_login.IsMatch(Newlogin) && rg_pb.IsMatch(password))
                          {
                              int maxID = db.User.Max(u => u.Id);
                              User newUser = new User(maxID + 1, Newlogin, NewEmail, password);

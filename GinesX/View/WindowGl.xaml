@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GinesX.View"
         mc:Ignorable="d"
-        Title="WindowGl" Height="450" Width="800">
-    <Grid>
-        
+        Title="WindowGl" Height="450" Width="800" WindowStyle="None" ResizeMode="NoResize">
+    <Grid x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="100*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <TabControl Style="{StaticResource MaterialDesignFilledTabControl}">
+                <TabItem Header="Profile"
+                         Background="#FF5F0404">
+                    <StackPanel>
+                        <TextBlock Text="профиль"/>
+                    </StackPanel>
+                </TabItem> 
+                <TabItem Header="Store" >
+                    <StackPanel>
+                        <TextBlock Text="магазин"/>
+                    </StackPanel>
+                </TabItem>
+            </TabControl>
+        </Grid>
     </Grid>
 </Window>

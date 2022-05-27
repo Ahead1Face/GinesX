@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GinesX.CustomControls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,10 @@ namespace GinesX.View
         public WindowGl()
         {
             InitializeComponent();
+
+            WindowBorderToThird windowBorderToThird = new WindowBorderToThird(this);
+            windowBorderToThird.SetValue(Grid.RowProperty, 0);
+            MainGrid.Children.Add(windowBorderToThird);
         }
     }
 }

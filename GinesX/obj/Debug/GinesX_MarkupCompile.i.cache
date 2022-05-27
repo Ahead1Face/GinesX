@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Satonin\GinesX\GinesX\App.xaml
-51271564335
+6228985483
 
-18-348011476
+191059176769
 18-2117185522
-CustomControls\WindowBorder.xaml;Dictionary1.xaml;View\MainWindow.xaml;View\RegWindow.xaml;View\WindowGl.xaml;
+CustomControls\WindowBorder.xaml;CustomControls\WindowBorderToThird.xaml;Dictionary1.xaml;View\MainWindow.xaml;View\RegWindow.xaml;View\WindowGl.xaml;
 
-False
+True
 

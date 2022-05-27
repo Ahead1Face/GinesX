@@ -3,12 +3,15 @@ using GinesX.ViewModel;
 
 namespace GinesX
 {
-    class WindowBilder
+    public static class CurrentUser
     {
         public static int Id { get; set; }
         public static string Login { get; set; }
-        public static string Password { get; set; }
-        public static string Email { get; set; }
+    }
+
+    class WindowBilder
+    {
+        
         public static void ShowMainWindow()
         {
 
@@ -30,13 +33,13 @@ namespace GinesX
 
         public static void ShowWindowGl(int newID, string newlogin, string newpassword)
         {
-            Id = newID;
-            Login = newlogin;
-            Password = newpassword;
+            CurrentUser.Id = newID;
+            CurrentUser.Login = newlogin;
 
             var windowGl = new WindowGl();
             var windowGlModel = new WindowGlModel();
             windowGl.DataContext = windowGlModel;
+            windowGl.Show();
             windowGlModel.EventCloseWindow += (sender, args) => { windowGl.Close(); };
         }
     }

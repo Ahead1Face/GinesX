@@ -119,3 +119,5 @@ D:\Sigma\GinesX\GinesX\obj\Debug\GinesX.csproj.CoreCompileInputs.cache
 D:\Sigma\GinesX\GinesX\obj\Debug\GinesX.csproj.CopyComplete
 D:\Sigma\GinesX\GinesX\obj\Debug\GinesX.exe
 D:\Sigma\GinesX\GinesX\obj\Debug\GinesX.pdb
+C:\Satonin\GinesX\GinesX\obj\Debug\CustomControls\WindowBorderToThird.g.cs
+C:\Satonin\GinesX\GinesX\obj\Debug\CustomControls\WindowBorderToThird.baml

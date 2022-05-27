@@ -76,6 +76,9 @@
     <Compile Include="CustomControls\WindowBorder.xaml.cs">
       <DependentUpon>WindowBorder.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\WindowBorderToThird.xaml.cs">
+      <DependentUpon>WindowBorderToThird.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DataTransform.cs" />
     <Compile Include="Model\Game.cs" />
     <Compile Include="Model\User.cs" />
@@ -89,6 +92,10 @@
     </Compile>
     <Compile Include="WindowBilder.cs" />
     <Page Include="CustomControls\WindowBorder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\WindowBorderToThird.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
