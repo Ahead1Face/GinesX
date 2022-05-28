@@ -50,8 +50,6 @@
                              HorizontalContentAlignment="Center"
                              PasswordChanged="TB_Password_PasswordChanged"
                               />
-                             
-                
                 <Grid Grid.Row="5">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="3*"/>

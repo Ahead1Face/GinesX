@@ -77,18 +77,13 @@ namespace GinesX.ViewModel
             }
         }
 
-        private Command changeToMainWindow;
-
-
-        private Command reg;
-
         public RegMindowModel()
         {
             EmailColor = Brushes.Black;
             LoginColor = Brushes.Black;
             PasswordColor = Brushes.Black;
         }
-
+        private Command reg;
         public Command Reg
         {
             get
@@ -145,7 +140,7 @@ namespace GinesX.ViewModel
                              User newUser = new User(maxID + 1, Newlogin, NewEmail, password);
                              db.User.Add(newUser);
                              db.SaveChanges();
-                             WindowBilder.ShowWindowGl(maxID + 1, Newlogin, password);
+                             WindowBilder.ShowWindowGl(maxID + 1, Newlogin, NewEmail);
                              CloseWindow();
                          }
                      }
@@ -153,6 +148,7 @@ namespace GinesX.ViewModel
             }
    
         }
+        private Command changeToMainWindow;
 
         public void CloseWindow() => RegMindowClose?.Invoke(this, EventArgs.Empty);
         public Command ChangeToMainWindow

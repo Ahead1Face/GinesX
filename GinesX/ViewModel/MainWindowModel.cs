@@ -60,7 +60,7 @@ namespace GinesX.ViewModel
                             var user = users.Where(u => u.Login == Login && u.Password == pb.Password).FirstOrDefault();
                             if (user != null)
                             {
-                                WindowBilder.ShowWindowGl(user.Id, user.Login, user.Password);
+                                WindowBilder.ShowMainToWindowGl(user.Id, user.Login);
                                 CLoseWindow();
                             }
                             else
