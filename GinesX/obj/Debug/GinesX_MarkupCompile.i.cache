@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Sigma\Github\GinesX\obj\Debug\
+D:\Sigma\GinesX\GinesX\obj\Debug\
 GinesX
 none
 false
 DEBUG;TRACE
-D:\Sigma\Github\GinesX\App.xaml
+D:\Sigma\GinesX\GinesX\App.xaml
 6-1546887630
 
 191153219758
-181592811863
+18-1859516363
 CustomControls\WindowBorder.xaml;CustomControls\WindowBorderToThird.xaml;Dictionary1.xaml;View\MainWindow.xaml;View\RegWindow.xaml;View\WindowGl.xaml;
 
 False

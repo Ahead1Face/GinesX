@@ -158,6 +158,20 @@
   <ItemGroup>
     <Resource Include="Image\fon.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Game\Red Dead Redemption 2.jpeg" />
+    <Resource Include="Image\Game\sify.jpg" />
+    <Resource Include="Image\Game\The Skywalker Saga.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Game\Witcher3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Game\KindomComeDeliverance.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Game\Assassin’s Creed Valhalla.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
