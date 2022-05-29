@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace GinesX.ViewModel
 {
@@ -17,7 +19,11 @@ namespace GinesX.ViewModel
         public WindowGlModel()
         {
             EditLogin = CurrentUser.Login;
-            EditEmail = CurrentUser.Email;
+            using(BDConnect db = new BDConnect())
+            {
+                var user = db.User.Where(u => u.Login == CurrentUser.Login).FirstOrDefault();
+                EditEmail = user.Email;
+            }
 
             LoginColor = Brushes.Black;
             EmailColor = Brushes.Black;
@@ -105,36 +111,98 @@ namespace GinesX.ViewModel
                     {
                         var users = db.User.ToList();
                         var user = users.Where(u => u.Login == CurrentUser.Login).FirstOrDefault();
-                        if(user != null)
+                        if (user != null)
                         {
-                            if (rg_email.IsMatch(EditEmail))
+                            if (!String.IsNullOrEmpty(EditEmail) && rg_email.IsMatch(EditEmail))
                             {
                                 user.Email = EditEmail;
                                 MessageBox.Show("Электронная почта изменена");
                             }
                             else
                                 MessageBox.Show("Электронная почта не изменена");
-                            if (rg_login.IsMatch(EditLogin))
+                            if (!String.IsNullOrEmpty(EditLogin) && rg_login.IsMatch(EditLogin))
                             {
                                 user.Login = EditLogin;
                                 MessageBox.Show("Логин изменен");
                             }
                             else
                                 MessageBox.Show("Логин не изменен");
-                            if (rg_pb.IsMatch(password))
+                            if (!String.IsNullOrEmpty(password) && rg_pb.IsMatch(password))
                             {
                                 user.Password = password;
                                 MessageBox.Show("Пароль изменен");
                             }
                             else
                                 MessageBox.Show("Пароль не изменен");
+                            db.SaveChanges();
                         }
-                        
-                           
+                    }
+                }));
+
+            }
+        }
+        BitmapImage avatar;
+        public BitmapImage Avatar
+        {
+            get
+            {
+                BitmapImage a = new BitmapImage();
+                using (BDConnect db = new BDConnect())
+                {
+                    foreach (var u in db.User)
+                    {
+                        if (u.Id == CurrentUser.Id)
+                        {
+                            if (u.avatar.Length == 0)
+                            {
+                                string exePath = System.Reflection.Assembly.GetExecutingAssembly().Location;
+                                string folderPath = System.IO.Path.GetDirectoryName(exePath);
+                                a = new BitmapImage(new Uri(folderPath + "\\Image\\" + "defuat.jpg"));
+                            }
+                            else
+                            {
+                                a = DataTransform.ByteToImage(u.avatar);
+                            }
+                        }
+                    }
+                }
+                return a;
+            }
+            set
+            {
+                avatar = value;
+                OnPropertyChanged("avatar");
+            }
+        }
+        private Command editAvatar;
+        public Command EditAvatar
+        {
+            get
+            {
+                return editAvatar ?? (editAvatar = new Command(odj =>
+                {
+                    OpenFileDialog fd = new OpenFileDialog();
+                    fd.Filter = "Images (*.jpg)|*.jpg";
+                    fd.ShowDialog();
+                    if (!string.IsNullOrEmpty(fd.FileName))
+                    {
+                        using(BDConnect db = new BDConnect())
+                        {
+                            BitmapImage image = new BitmapImage(new Uri(fd.FileName));
+                            
+                            foreach(var u in db.User)
+                            {
+                                if(u.Id == CurrentUser.Id)
+                                {
+                                    u.avatar = DataTransform.JpgToByte(image);
+                                    Avatar = image;
+                                }
+                            }
+                            db.SaveChanges();
+                        }
                     }
                 }));
             }
         }
-        
     }
 }

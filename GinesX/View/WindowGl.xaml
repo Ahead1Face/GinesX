@@ -17,10 +17,10 @@
                 <TabItem Header="Profile">
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="260*"/>
-                            <ColumnDefinition Width="500*"/>
+                            <ColumnDefinition Width="320"/>
+                            <ColumnDefinition Width="520*"/>
                         </Grid.ColumnDefinitions>
-                        <Grid Grid.Column="1">
+                        <Grid Grid.Column="4">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="80*"/>
                                 <ColumnDefinition Width="300*"/>
@@ -77,6 +77,29 @@
                                         Command="{Binding Edit}"
                                         CommandParameter="{Binding ElementName=Edit_Password}"/>
                             </Grid>
+                        </Grid>
+                        <Grid Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30*"/>
+                                <RowDefinition Height="160*"/>
+                                <RowDefinition Height="90*"/>
+                                <RowDefinition Height="40*"/>
+                                <RowDefinition Height="55*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40*"/>
+                                <ColumnDefinition Width="100*"/>
+                                <ColumnDefinition Width="40*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Grid.Row="3" 
+                                    Grid.Column="1"
+                                    Height="Auto"
+                                    Content="ИЗМЕНИТЬ АВАТАР" Margin="0,2"
+                                    Command="{Binding EditAvatar}"
+                                    />
+                            <Image Grid.Row="1" 
+                                   Grid.Column="1"
+                                   Source="{Binding Avatar}"/>
                         </Grid>
                     </Grid>
                 </TabItem>

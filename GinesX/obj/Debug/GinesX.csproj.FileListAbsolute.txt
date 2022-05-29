@@ -159,3 +159,10 @@ D:\Sigma\Github\GinesX\obj\Debug\GinesX.exe
 D:\Sigma\Github\GinesX\obj\Debug\GinesX.pdb
 D:\Sigma\GinesX\GinesX\obj\Debug\CustomControls\WindowBorderToThird.g.cs
 D:\Sigma\GinesX\GinesX\obj\Debug\CustomControls\WindowBorderToThird.baml
+C:\Satonin\GinesX\GinesX\bin\Debug\Image\Game\Red Dead Redemption 2.jpeg
+C:\Satonin\GinesX\GinesX\bin\Debug\Image\Game\sify.jpg
+C:\Satonin\GinesX\GinesX\bin\Debug\Image\Game\The Skywalker Saga.jpg
+C:\Satonin\GinesX\GinesX\bin\Debug\Image\Game\Witcher3.jpg
+C:\Satonin\GinesX\GinesX\bin\Debug\Image\Game\KindomComeDeliverance.jpg
+C:\Satonin\GinesX\GinesX\bin\Debug\Image\Game\Assassin’s Creed Valhalla.jpg
+C:\Satonin\GinesX\GinesX\bin\Debug\Image\defuat.jpg

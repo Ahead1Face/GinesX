@@ -17,8 +17,8 @@ namespace GinesX
         protected override void OnStartup(StartupEventArgs e)
         {
             WindowBilder.ShowMainWindow();
-            InitDB();
             base.OnStartup(e);
+            InitDB();
         }
         void InitDB()
         {
@@ -37,7 +37,7 @@ namespace GinesX
                         db.Game.Add(KCD);
                         Game RDR2 = new Game(1, "Red Dead Redemption 2", 4300, imagesPath + "Red Dead Redemption 2.jpeg");
                         db.Game.Add(RDR2);
-                        Game Sify = new Game(1, "Sify", 3000, imagesPath = "sify.jpg");
+                        Game Sify = new Game(1, "Sify", 3000, imagesPath + "sify.jpg");
                         db.Game.Add(Sify);
                         Game LSS = new Game(1, "The Skywalker Saga", 1400, imagesPath + "The Skywalker Saga.jpg");
                         db.Game.Add(LSS);

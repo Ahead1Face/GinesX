@@ -36,13 +36,13 @@ namespace GinesX.View
             {
                 List<RowDefinition> rows = new List<RowDefinition>();
                 int gameCount = db.Game.Count();
-                int rowsCount = (gameCount + 2) / 3;
+                int rowsCount = 20;
                 for (int i = 0; i < rowsCount; i++)
                 {
                     rows.Add(new RowDefinition());
                     rows[i * 2].Height = new GridLength(30);
                     rows.Add(new RowDefinition());
-                    rows[i *2 +1].Height = new GridLength(130, GridUnitType.Star);
+                    rows[(i * 2) + 1].Height = new GridLength(130, GridUnitType.Star);
                 }
                 rows.Add(new RowDefinition());
                 rows[rowsCount - 1].Height = new GridLength(30);
@@ -64,7 +64,7 @@ namespace GinesX.View
 
                     Label price = new Label();
                     price.HorizontalAlignment = HorizontalAlignment.Center;
-                    price.Content = game.Price + "рублей";
+                    price.Content = game.Price + " рублей";
 
                     Label Name = new Label();
                     Name.HorizontalAlignment = HorizontalAlignment.Center;
@@ -73,14 +73,19 @@ namespace GinesX.View
                     Image image = new Image();
                     BitmapImage Logo = DataTransform.ByteToImage(game.Image);
                     image.Source = Logo;
-                    columnNum = (columnNum == 1) ? 3 : 5;
+                    if (columnNum == 1)
+                        columnNum = 3;
+                    else if (columnNum == 3)
+                        columnNum = 5;
+                    else
+                        columnNum = 1;
 
                     sp.Children.Add(image);
                     sp.Children.Add(Name);
                     sp.Children.Add(price);
                     GameGrid.Children.Add(sp);
 
-                    if((index + 1) % 2 == 0)
+                    if((index + 1) % 3 == 0)
                     {
                         rowNum += 2;
                     }
